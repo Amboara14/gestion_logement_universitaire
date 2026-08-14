@@ -75,8 +75,8 @@ WSGI_APPLICATION = 'gestion_logement_univ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.MySQL',
+        'NAME': BASE_DIR / 'db.MySQL',
     }
 }
 
