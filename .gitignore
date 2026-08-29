@@ -1,0 +1,9 @@
+# Fichiers Python temporaires
+_pycache_/
+*.py[cod]
+
+# Environnement virtuel Python
+venv/
+
+# Variables d'environnement
+.env
