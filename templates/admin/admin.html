@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Espace Administrateur - Gestion Logement Universitaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand">🏠 Gestion Logement Universitaire</span>
+            <span class="text-white">Espace Administrateur</span>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Tableau de bord Administrateur</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card shadow p-3 text-center">
+                    <h6>Chambres disponibles</h6>
+                    <h3 class="text-success">--</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow p-3 text-center">
+                    <h6>Demandes en attente</h6>
+                    <h3 class="text-warning">--</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow p-3 text-center">
+                    <h6>Étudiants résidents</h6>
+                    <h3 class="text-primary">--</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow p-3 text-center">
+                    <h6>Pannes signalées</h6>
+                    <h3 class="text-danger">--</h3>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <button class="btn btn-primary me-2">Gérer les bâtiments</button>
+            <button class="btn btn-secondary me-2">Valider les demandes</button>
+            <button class="btn btn-success">Gérer les paiements</button>
+        </div>
+    </div>
 </body>
 </html>

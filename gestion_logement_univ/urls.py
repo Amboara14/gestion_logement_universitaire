@@ -1,22 +1,15 @@
-"""
-URL configuration for gestion_logement_univ project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
+from src.authentification.views import login_view, register_view
+from src.etudiants.views import etudiant_view
+from src.admin.views import admin_view
+from src.agent_technique.views import agent_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', login_view, name='login'),
+    path('register/', register_view, name='register'),
+    path('etudiant/', etudiant_view, name='etudiant'),
+    path('espace-admin/', admin_view, name='espace_admin'),
+    path('agent-technique/', agent_view, name='agent_technique'),
 ]
