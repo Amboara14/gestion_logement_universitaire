@@ -1,5 +1,5 @@
 # Fichiers Python temporaires
-_pycache_/
+__pycache__/
 *.py[cod]
 
 # Environnement virtuel Python
