@@ -1,50 +1,38 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Espace Administrateur - Gestion Logement Universitaire</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <span class="navbar-brand">🏠 Gestion Logement Universitaire</span>
-            <span class="text-white">Espace Administrateur</span>
-        </div>
-    </nav>
-    <div class="container mt-4">
-        <h2>Tableau de bord Administrateur</h2>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card shadow p-3 text-center">
-                    <h6>Chambres disponibles</h6>
-                    <h3 class="text-success">--</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow p-3 text-center">
-                    <h6>Demandes en attente</h6>
-                    <h3 class="text-warning">--</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow p-3 text-center">
-                    <h6>Étudiants résidents</h6>
-                    <h3 class="text-primary">--</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow p-3 text-center">
-                    <h6>Pannes signalées</h6>
-                    <h3 class="text-danger">--</h3>
-                </div>
-            </div>
-        </div>
-        <div class="mt-4">
-            <button class="btn btn-primary me-2">Gérer les bâtiments</button>
-            <button class="btn btn-secondary me-2">Valider les demandes</button>
-            <button class="btn btn-success">Gérer les paiements</button>
+{% extends "base.html" %}
+{% block title %}Administration{% endblock %}
+{% block content %}
+<div class="page-head">
+    <h4>Administration</h4>
+    <p>Vue d'ensemble de la résidence universitaire.</p>
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-md-6">
+        <div class="row-item" style="display:block;">
+            <div class="label mb-2">Occupation des chambres</div>
+            <div class="stat-line"><span class="sub">Disponibles</span><span class="stat-num">--</span></div>
+            <div class="stat-line"><span class="sub">Occupées</span><span class="stat-num">--</span></div>
+            <div class="stat-line"><span class="sub">En maintenance</span><span class="stat-num">--</span></div>
         </div>
     </div>
-</body>
-</html>
+    <div class="col-md-6">
+        <div class="row-item" style="display:block;">
+            <div class="label mb-2">Activité récente</div>
+            <div class="stat-line"><span class="sub">Demandes en attente</span><span class="stat-num">--</span></div>
+            <div class="stat-line"><span class="sub">Étudiants résidents</span><span class="stat-num">--</span></div>
+            <div class="stat-line"><span class="sub">Pannes signalées</span><span class="stat-num">--</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="row-item">
+    <div class="left">
+        <div class="label">Actions rapides</div>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-bleu btn-sm">Gérer les bâtiments</button>
+        <button class="btn btn-line btn-sm">Valider les demandes</button>
+        <button class="btn btn-marron btn-sm">Gérer les paiements</button>
+    </div>
+</div>
+{% endblock %}
